@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import crust from "./assets/crust.png";
+import eggplant from "./assets/eggplant.png";
+import nuggets from "./assets/nuggets.png";
+import meatballs from "./assets/meatballs.png";
+import spinach from "./assets/spinach.png";
+import Toppings from "./components/Toppings";
+import "./App.css";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="wrapper">
+        <div className="contain" style={{ backgroundImage: `url(${crust})` }}>
+          <div className="inside">
+            <Toppings count={6} topping={spinach} />
+            <Toppings count={3} topping={eggplant} />
+            <Toppings count={3} topping={nuggets} />
+            <Toppings count={3} topping={meatballs} />
+          </div>
+        </div>
+      </div>
+    </>
   );
-}
+};
 
 export default App;
