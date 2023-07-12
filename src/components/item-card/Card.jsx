@@ -2,21 +2,21 @@ import React from "react";
 import "./styles.css";
 import { useDispatch } from "react-redux";
 import { setIngredients } from "../../redux/slices/ingredientsSlice";
-const Card = ({ item }) => {
+const Card = ({ topping }) => {
   const dispatch = useDispatch();
 
-  const handleAddItem = () => dispatch(setIngredients(item));
+  const handleAddItem = () => dispatch(setIngredients(topping));
   return (
     <div className="item">
       <img
-        src={item.thumbnail}
+        src={topping.thumbnail}
         height={250}
         width={250}
-        alt={item.name}
+        alt={topping.name}
         onClick={handleAddItem}
       />
       <div className="item-text">
-        <p>{item.name}</p>
+        <p>{topping.name}</p>
         <input type="checkbox" />
       </div>
     </div>
