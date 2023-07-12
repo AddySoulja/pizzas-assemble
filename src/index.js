@@ -1,7 +1,6 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
+import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
 import {
   Route,
@@ -9,12 +8,13 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
-
-import Dashboard from "./pages/dashboard/Dashboard";
-import MenuItems from "./components/item-menu/MenuItems";
-import CustomizePizza from "./components/customize-pizza/CustomizePizza";
 import { Provider } from "react-redux";
 import store from "./redux/store";
+import App from "./App";
+import Dashboard from "./pages/dashboard/Dashboard";
+import Checkout from "./pages/checkout/Checkout";
+import MenuItems from "./pages/menu/MenuItems";
+import CustomizePizza from "./pages/customize/CustomizePizza";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -22,8 +22,9 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route path="/" index={true} element={<Dashboard />} />
-      <Route path="/items" element={<MenuItems />} />
+      <Route path="/menu" element={<MenuItems />} />
       <Route path="/customize" element={<CustomizePizza />} />
+      <Route path="/checkout" element={<Checkout />} />
     </Route>
   )
 );

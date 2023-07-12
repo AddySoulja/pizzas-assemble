@@ -63,28 +63,6 @@
   align-items: center;
   justify-content: space-between;
 }
-.crust {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 240px;
-  width: 370px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  margin-bottom: 25vh;
-}
-
-.inside {
-
-  position: relative;
-  bottom: 10px;
-  left: 5px;
-  display: flex;
-  width: 258px;
-  height: 168px;
-  border-radius: 100%;
-}
 
 .btn-layout {
     display: flex;

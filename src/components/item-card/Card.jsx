@@ -1,12 +1,20 @@
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  removeIngredient,
+  setIngredients,
+} from "../../redux/slices/ingredientsSlice";
 import "./styles.css";
-import { setIngredients } from "../../redux/slices/ingredientsSlice";
 
 const Card = ({ topping }) => {
+  const { list } = useSelector((state) => state.ingredients);
   const dispatch = useDispatch();
 
-  const handleAddItem = () => dispatch(setIngredients(topping));
+  const handleItem = () =>
+    list.includes(topping)
+      ? dispatch(removeIngredient(topping))
+      : dispatch(setIngredients(topping));
+
   return (
     <div className="item">
       <img
@@ -14,11 +22,18 @@ const Card = ({ topping }) => {
         height={250}
         width={250}
         alt={topping.name}
-        onClick={handleAddItem}
+        onClick={handleItem}
       />
       <div className="item-text">
-        <p>{topping.name}</p>
-        <input type="checkbox" />
+        <label htmlFor={topping.name}>{topping.name}</label>
+        <input
+          type="checkbox"
+          name={topping.name}
+          id={topping.name}
+          value={topping.name || "topping"}
+          checked={list.includes(topping)}
+          onChange={handleItem}
+        />
       </div>
     </div>
   );

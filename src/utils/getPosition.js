@@ -1,7 +1,7 @@
-const minTop = 20,
-  maxTop = 100;
-const minLeft = 20,
-  maxLeft = 180;
+const minTop = -10,
+  maxTop = 140;
+const minLeft = -20,
+  maxLeft = 210;
 
 const getPosition = () => {
   const top = parseInt(Math.random() * (maxTop - minTop) + minTop);

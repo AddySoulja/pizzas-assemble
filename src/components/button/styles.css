@@ -1,0 +1,24 @@
+.button {
+    width: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: wheat;
+    text-decoration: none;
+    font-size: 20px;
+    color: #000;
+}
+
+.primary {
+    background-color: rgb(255, 255, 255)
+}
+.secondary {
+    background-color: rgb(190, 25, 3);
+    color: #FFF;
+}
+.success {
+    background-color: rgb(26, 228, 86);
+    color: #FFF;
+} 

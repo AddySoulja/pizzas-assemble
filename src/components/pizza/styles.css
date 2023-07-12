@@ -1,0 +1,23 @@
+.crust {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 14rem;
+  width: 24rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 12%;
+  padding: 20px;
+}
+
+.inside {
+
+  position: relative;
+  bottom: 10px;
+  left: 5px;
+  display: flex;
+  width: 258px;
+  height: 168px;
+  border-radius: 100%;
+}
