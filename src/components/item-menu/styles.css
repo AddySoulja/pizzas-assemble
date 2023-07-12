@@ -1,0 +1,66 @@
+.menu-items-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 85vh;
+    width: 80vw;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.432);
+    
+}
+
+.menu-items {
+
+    display: flex;
+    overflow-x: scroll;
+    padding: 20px;
+    gap: 30px;
+}
+
+.menu-items::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+.menu-items::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+.menu-items::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #D62929;
+}
+
+.nav-btns {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+}
+
+
+.btn-home, .btn-customize {
+    width: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+
+    text-decoration: none;
+    font-size: 20px;
+}
+.btn-home {
+    background-color: rgb(255, 255, 255)
+}
+.btn-customize {
+    background-color: rgb(190, 25, 3);
+    color: #FFF;
+}

@@ -1,0 +1,31 @@
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    width: 50vw;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.432);
+}
+
+.btn-start {
+    width: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: rgb(26, 228, 86);
+    text-decoration: none;
+    font-size: 20px;
+}

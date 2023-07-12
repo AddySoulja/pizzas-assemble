@@ -1,4 +1,5 @@
-import getPosition from "../utils/getPosition";
+import getPosition from "../../utils/getPosition";
+import "./styles.css";
 
 const Toppings = ({ count, topping }) => {
   return Array(count)
@@ -8,7 +9,7 @@ const Toppings = ({ count, topping }) => {
       return (
         <div
           key={`${top}${left}`}
-          className="item"
+          className="topping"
           style={{
             backgroundImage: `url(${topping})`,
             top: `${top}px`,

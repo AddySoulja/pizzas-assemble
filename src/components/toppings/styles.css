@@ -1,0 +1,11 @@
+.topping {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+}
