@@ -1,45 +1,33 @@
-import React from "react";
+import React, { useEffect } from "react";
+import "./styles.css";
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 import Toppings from "../toppings/Toppings";
 import crust from "../../assets/ingredients/crust.png";
-import eggplant from "../../assets/ingredients/eggplant.png";
-import nuggets from "../../assets/ingredients/nuggets.png";
-import meatballs from "../../assets/ingredients/meatballs.png";
-import spinach from "../../assets/ingredients/spinach.png";
-import "./styles.css";
-import { Link } from "react-router-dom";
+import DraggableCard from "../drag-card/DraggableCard";
 
 const CustomizePizza = () => {
+  const { list } = useSelector((state) => state.ingredients);
+
+  useEffect(() => {
+    console.log("In store: ", list);
+  }, [list]);
   return (
     <div className="custom-pizza-wrapper">
       <div className="main-layout">
         <div className="chosen-ingredients-layout">
           <h2>Drag ingredients</h2>
           <div className="chosen-ingredients">
-            <img src={nuggets} height={100} width={100} alt="topping" />
-            <img src={eggplant} height={100} width={100} alt="topping" />
-            <img src={meatballs} height={100} width={100} alt="topping" />
-            <img src={eggplant} height={100} width={100} alt="topping" />
-            <img src={meatballs} height={100} width={100} alt="topping" />
-            <img src={eggplant} height={100} width={100} alt="topping" />
-            <img src={meatballs} height={100} width={100} alt="topping" />
-            <img src={eggplant} height={100} width={100} alt="topping" />
-            <img src={meatballs} height={100} width={100} alt="topping" />
-            <img src={eggplant} height={100} width={100} alt="topping" />
-            <img src={meatballs} height={100} width={100} alt="topping" />
-            <img src={eggplant} height={100} width={100} alt="topping" />
-            <img src={meatballs} height={100} width={100} alt="topping" />
+            {list.map((item) => (
+              <DraggableCard key={item.name} item={item} />
+            ))}
           </div>
         </div>
         <div className="display-pizza">
           <h2>Drop ingredients</h2>
           <div className="crust" style={{ backgroundImage: `url(${crust})` }}>
-            <div className="inside">
-              <Toppings count={6} topping={spinach} />
-              <Toppings count={3} topping={eggplant} />
-              <Toppings count={3} topping={nuggets} />
-              <Toppings count={3} topping={meatballs} />
-            </div>
+            <div className="inside"></div>
           </div>
         </div>
       </div>

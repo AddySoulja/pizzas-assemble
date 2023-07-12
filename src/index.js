@@ -13,6 +13,8 @@ import {
 import Dashboard from "./pages/dashboard/Dashboard";
 import MenuItems from "./components/item-menu/MenuItems";
 import CustomizePizza from "./components/customize-pizza/CustomizePizza";
+import { Provider } from "react-redux";
+import store from "./redux/store";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -27,7 +29,9 @@ const router = createBrowserRouter(
 );
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>
 );
 
