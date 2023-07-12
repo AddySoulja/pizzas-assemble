@@ -8,10 +8,9 @@ const Toppings = ({ count, topping }) => {
       const { top, left } = getPosition();
       return (
         <div
-          key={`${top}${left}`}
           className="topping"
           style={{
-            backgroundImage: `url(${topping})`,
+            backgroundImage: `url(${topping.src})`,
             top: `${top}px`,
             left: `${left}px`,
           }}

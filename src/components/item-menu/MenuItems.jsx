@@ -1,6 +1,6 @@
 import React from "react";
-import "./styles.css";
 import { Link } from "react-router-dom";
+import "./styles.css";
 import Card from "../item-card/Card";
 import toppings from "../../utils/generateTopping";
 

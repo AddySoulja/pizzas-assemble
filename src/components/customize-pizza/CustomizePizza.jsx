@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./styles.css";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -9,6 +9,7 @@ import DraggableCard from "../drag-card/DraggableCard";
 
 const CustomizePizza = () => {
   const { list } = useSelector((state) => state.ingredients);
+  const [addedToppings, setAddedToppings] = useState([]);
 
   useEffect(() => {
     console.log("In store: ", list);
@@ -27,7 +28,11 @@ const CustomizePizza = () => {
         <div className="display-pizza">
           <h2>Drop ingredients</h2>
           <div className="crust" style={{ backgroundImage: `url(${crust})` }}>
-            <div className="inside"></div>
+            <div className="inside">
+              {addedToppings.map((item) => (
+                <Toppings key={item.name} count={4} topping={item} />
+              ))}
+            </div>
           </div>
         </div>
       </div>

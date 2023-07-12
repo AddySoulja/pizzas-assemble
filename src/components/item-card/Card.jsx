@@ -1,7 +1,8 @@
 import React from "react";
-import "./styles.css";
 import { useDispatch } from "react-redux";
+import "./styles.css";
 import { setIngredients } from "../../redux/slices/ingredientsSlice";
+
 const Card = ({ topping }) => {
   const dispatch = useDispatch();
 
